@@ -41,7 +41,7 @@ function displaySwimEntry(entry, index) {
             <h4>Swim Distance</h4>
             <h1>${entry.distance} Meter</h1>
         </div>
-        <button onclick="deleteSwim(${index})">Delete</button>
+        <button class="normalButton" onclick="deleteSwim(${index})">Delete</button>
     `;
     cardContainer.appendChild(card);
 }

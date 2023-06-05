@@ -23,7 +23,7 @@ body {
 
 #myHeader h1 {
     color: #ffffff;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 .recordInputBox {
@@ -55,7 +55,7 @@ body {
     align-items: center;
 }
 
-button {
+.normalButton{
     background-color: #4a90e2;
     color: #ffffff;
     border: none;
@@ -64,7 +64,8 @@ button {
     margin: 10px;
     cursor: pointer;
 }
-button:hover {
+
+.normalButton:hover {
     background-color: #2e6da4;
 }
 
@@ -80,25 +81,54 @@ input, select {
     margin: 5px 0;
 }
 
+#sumAndAdd{
+    /* border: 1px solid #888; */
+    width: 920px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+}
 
 #totalDistanceDisplay{
     border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    width: 920px;
+    padding: 40px;
+    
+    width: 40%;
+    flex-grow: 1;
     background-color: #6eafff;
+    
 }
 
 #totalDistanceDisplay h1{
     color: #e9f5ff;
     font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
 #totalDistanceDisplay h4{
     color: #e9f5ff;
     font-size: 1rem;
-    margin-bottom: 0.5rem;
+}
+
+#addNewButton{
+    border-radius: 5px;
+    padding: 40px;
+    border: none;
+    margin-left: 40px;
+    color: #ffffff;
+    width: 40%;
+    flex-grow: 1;
+    background-color: #6eafff;
+    cursor: pointer;
+}
+#addNewButton:hover {
+    background-color: #2a80ca;
+}
+
+#addNewButton h1{
+    color: #e9f5ff;
+    font-size: 4rem;
+    margin-bottom: 1rem;
 }
 
 .card {
@@ -131,10 +161,31 @@ input, select {
     .card {
         width: 80%;
     }
+
+
+    #sumAndAdd{
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 600px) {
     .card {
+        width: 100%;
+    }
+
+    .card h1 {
+        color: #e9f5ff;
+        font-size: 1.5rem;
+    
+    }
+    .card h4 {
+        color: #e9f5ff;
+        font-size: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+
+    #sumAndAdd{
         width: 100%;
     }
 }
