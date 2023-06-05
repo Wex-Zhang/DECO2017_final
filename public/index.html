@@ -8,11 +8,25 @@
     <header id="myHeader">
         <center><h1>SwimSmart</h1></center>
     </header>
-    
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>123</h1>
-    <p>this is the start of this repositry</p>
+    
+    <button onclick="showInputBox('addSwimRecord')">Add Record</button>
+
+    <div id="swimCardContainer"></div>
+
+    <div id="addSwimRecord" class="recordInputBox">
+        <div class="recordInputBoxContent">
+            <label>Duration（Min）：</label>
+            <input id="duration" type="number"><br>
+            <label>Distance（Meter）：</label>
+            <input id="distance" type="number"><br>
+            <button onclick="addSwim()">Record</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
