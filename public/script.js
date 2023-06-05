@@ -24,6 +24,7 @@ function addSwim() {
     localStorage.setItem('swimData', JSON.stringify(swimData));
     displaySwimEntry(swimEntry, swimData.length - 1);
     closeInputBox('addSwimRecord'); 
+    displayTotalDistance(); 
 }
 
 
@@ -46,6 +47,8 @@ window.onload = function() {
     for(let i = 0; i < swimData.length; i++) {
         displaySwimEntry(swimData[i], i);
     }
+    //load totoal distance when page loading
+    displayTotalDistance(); 
 }
 
 function deleteSwim(index) {
@@ -55,5 +58,18 @@ function deleteSwim(index) {
     for(let i = 0; i < swimData.length; i++) {
         displaySwimEntry(swimData[i], i);
     }
+    displayTotalDistance(); 
     
+}
+
+function displayTotalDistance() {
+    let totalDistance = 0;
+    for(let i = 0; i < swimData.length; i++) {
+        totalDistance += swimData[i].distance;
+    }
+    let card = document.getElementById('totalDistanceDisplay');
+    card.innerHTML = `
+        <h1>${totalDistance} Meters</h1>
+        <h4>Total Distance</h4>
+    `;
 }

@@ -98,6 +98,28 @@ input, select {
     margin-bottom: 0.5rem;
 }
 
+#totalDistanceDisplay{
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 920px;
+    background-color: #6eafff;
+}
+
+#totalDistanceDisplay h1{
+    color: #e9f5ff;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#totalDistanceDisplay h4{
+    color: #e9f5ff;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+
+
 @media screen and (max-width: 992px) {
     .card {
         width: 80%;
