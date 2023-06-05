@@ -37,6 +37,7 @@ function displaySwimEntry(entry, index) {
         <h4>Swim Duration</h4>
         <h4>${entry.distance} Me</h4>
         <h4>Swim Distance</h4>
+        <button onclick="deleteSwim(${index})">Delete</button>
     `;
     cardContainer.appendChild(card);
 }
@@ -45,4 +46,14 @@ window.onload = function() {
     for(let i = 0; i < swimData.length; i++) {
         displaySwimEntry(swimData[i], i);
     }
+}
+
+function deleteSwim(index) {
+    swimData.splice(index, 1);
+    localStorage.setItem('swimData', JSON.stringify(swimData));
+    document.getElementById('swimCardContainer').innerHTML = '';
+    for(let i = 0; i < swimData.length; i++) {
+        displaySwimEntry(swimData[i], i);
+    }
+    
 }
