@@ -33,11 +33,14 @@ function displaySwimEntry(entry, index) {
     let card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
-        <nobr><h1>${entry.duration}</h1></nobr> 
-        <h4> Min</h4>
-        <h4>Swim Duration</h4>
-        <h4>${entry.distance} Me</h4>
-        <h4>Swim Distance</h4>
+        <div class="dataBox">
+            <h4>Swim Duration</h4>
+            <h1>${entry.duration} Minutes</h1>
+        </div>
+        <div class="dataBox">
+            <h4>Swim Distance</h4>
+            <h1>${entry.distance} Meter</h1>
+        </div>
         <button onclick="deleteSwim(${index})">Delete</button>
     `;
     cardContainer.appendChild(card);
