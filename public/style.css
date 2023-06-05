@@ -1,0 +1,10 @@
+#myHeader {
+    background-color: #4a90e2;
+    padding: 20px;
+    width: 100%;
+}
+
+#myHeader h1 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
