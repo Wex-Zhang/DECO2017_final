@@ -209,18 +209,23 @@ input, select {
 }
 
 .deleteButton{
-    background-color: #4a90e2;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
-    margin-top: 2rem;
+    background-color: #ffffff00;
+    color: #5B5B5B;
+    font-size: 1rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    border-style:solid;
+    border-color: #5B5B5B;
+    border-radius: 30px;
+    padding: 3px 10px;
+    margin-top: 146px;
     cursor: pointer;
 }
 
 .deleteButton:hover {
-    background-color: #2e6da4;
-    
+    color: #ffffff;
+    background-color: #346cfa;
+    border-color: #346cfa;
 }
 
 .card {
@@ -239,28 +244,46 @@ input, select {
     color: #2A64F6;
     font-size: 5rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
 
 }
 .cardUnitOne {
     color: #5B5B5B;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-family: 'Noto Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     
 }
 
-.dataBox{
+.dataIcon{
+    height: 40px;
+}
+
+.dataBoxOne{
 
     flex-grow: 1;
     display: grid;
     place-items: center;
 }
 
+.dateAndDeleteBox{
+    padding-top: 10px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
 
 
+
+.dateAndDeleteBox h4{
+    color: #5B5B5B;
+    font-size: 1rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+}
 
 
 

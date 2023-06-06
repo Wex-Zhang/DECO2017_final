@@ -63,22 +63,22 @@ function displaySwimEntry(entry, index) {
     let card = document.createElement('div');
     card.className = 'card';
     card.innerHTML = `
-        <div class="dataBox">
-            <h4>Duration</h4>
+        <div class="dataBoxOne">
+            <img src="timeIcon.png" class="dataIcon" alt="timeIcon">
             <h1 class="cardDataOne">${entry.duration}</h1>
-            <h4 class="cardUnitOne">Minutes</h4>
+            <h4 class="cardUnitOne">min</h4>
         </div>
-        <div class="dataBox">
-            <h4>Distance</h4>
+        <div class="dataBoxOne">
+            <img src="distanceIcon.png" class="dataIcon" alt="distanceIcon">
             <h1 class="cardDataOne">${entry.distance}</h1>
-            <h4 class="cardUnitOne">Meters</h4>
+            <h4 class="cardUnitOne">m</h4>
         </div>
-        <div class="dataBox">
-            <h4>Calories</h4>
+        <div class="dataBoxOne">
+            <img src="calorieIcon.png" class="dataIcon" alt="calorieIcon">
             <h1 class="cardDataOne">${entry.calories}</h1>
-            <h4 class="cardUnitOne">Kcal</h4>
+            <h4 class="cardUnitOne">kcal</h4>
         </div>       
-        <div>
+        <div class="dateAndDeleteBox">
             <h4>${entry.date}</h4>
             <button class="deleteButton" onclick="deleteSwim(${index})">Delete</button>
         </div>       
