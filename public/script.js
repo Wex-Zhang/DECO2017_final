@@ -1,12 +1,12 @@
 let swimData = JSON.parse(localStorage.getItem('swimData')) || [];
 let userInfo = JSON.parse(localStorage.getItem('userInfo')) || {
-    weight: 0,
+    weight: null,
 };
 
 function showInputBox(inputId) {
     // check if user has input the weight
     if(inputId == 'addSwimRecord'){
-        if (userInfo.weight == 0) {
+        if (userInfo.weight == null) {
             alert("Please enter your weight");
             showInputBox('WeightInputBox');
             return;
@@ -30,8 +30,18 @@ function addSwim() {
     let distance = parseInt(document.getElementById('distance').value);
     let met = parseFloat(document.getElementById('intensity').value);
     let date = document.getElementById('date').value;
-    
     let calories = calculateCalories(userInfo.weight, met, duration);
+
+    // check if user entered all value
+    if (duration === "" || distance === "" || met === "" || date === "") {
+        alert("please enter all value");
+        return;
+    }
+    // check if user entered positive value
+    if (parseInt(duration) <= 0 || parseInt(distance) <= 0) {
+        alert("Swim duration and distance should be positive value");
+        return;
+    }    
 
     let swimEntry = {
         duration: duration,
@@ -111,6 +121,13 @@ function displayTotalDistance() {
 
 function saveWeight() {
     let weight = parseInt(document.getElementById('weight').value);
+
+    // check if user entered positive value
+    if (parseInt(weight) <= 0) {
+        alert("Your weight should be positive a value");
+        return;
+    }    
+
     userInfo.weight = weight;
     localStorage.setItem('userInfo', JSON.stringify(userInfo));
     closeInputBox('WeightInputBox')
