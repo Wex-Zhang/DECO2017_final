@@ -65,18 +65,18 @@ function displaySwimEntry(entry, index) {
     card.innerHTML = `
         <div class="dataBox">
             <h4>Duration</h4>
-            <h1>${entry.duration}</h1>
-            <h4>Minutes</h4>
+            <h1 class="cardDataOne">${entry.duration}</h1>
+            <h4 class="cardUnitOne">Minutes</h4>
         </div>
         <div class="dataBox">
             <h4>Distance</h4>
-            <h1>${entry.distance}</h1>
-            <h4>Meters</h4>
+            <h1 class="cardDataOne">${entry.distance}</h1>
+            <h4 class="cardUnitOne">Meters</h4>
         </div>
         <div class="dataBox">
             <h4>Calories</h4>
-            <h1>${entry.calories}</h1>
-            <h4>Kcal</h4>
+            <h1 class="cardDataOne">${entry.calories}</h1>
+            <h4 class="cardUnitOne">Kcal</h4>
         </div>       
         <div>
             <h4>${entry.date}</h4>
@@ -113,9 +113,8 @@ function displayTotalDistance() {
     }
     let card = document.getElementById('totalDistanceDisplay');
     card.innerHTML = `
-        <h1>${totalDistance} Meters</h1>
-        <h4>Total Distance</h4>
-        
+        <h4>Total swim distance: </h4>
+        <h1>${totalDistance} m</h1>
     `;
 }
 

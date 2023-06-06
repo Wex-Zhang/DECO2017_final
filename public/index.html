@@ -5,21 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwimSmart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SignWriting&family=Open+Sans:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
     <header id="myHeader">
-        <center><h1>SwimSmart</h1></center>
-        <img src="weightIcon.png" id="weightImg" alt="Weight button" onclick="showInputBox('WeightInputBox')">
+        <div id="headerLayerOne">
+            <center><h1>SwimSmart</h1></center>
+            <img src="weightIcon.png" id="weightImg" alt="Weight button" onclick="showInputBox('WeightInputBox')">
+        </div>
+        <div id="headerHorizontalDivider"></div>
+        <div id="headerLayerTwo">
+            <div id="totalDistanceDisplay"></div>
+            <div id="headerVerticalDivider"></div>
+            <button id="addNewButton" onclick="showInputBox('addSwimRecord')">
+                <h1>+</h1>
+                <h4>Add Record</h4>
+            </button>
+        </div>
     </header>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     
-    <div id="sumAndAdd">
-        <div id="totalDistanceDisplay"></div>
-        <button id="addNewButton" onclick="showInputBox('addSwimRecord')">
-            <h1>+</h1>
-            <h4>Add Record</h4>
-        </button>
-    </div>
+    <div id="headerVerticalDivider"></div>
 
     <div id="WeightInputBox" class="recordInputBox">
         <div class="recordInputBoxContent">
