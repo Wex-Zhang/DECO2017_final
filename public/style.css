@@ -113,6 +113,7 @@ body {
     margin-right: 5%;
 }
 
+
 #addNewButton{
     border-radius: 5px;
     padding: 10px;
@@ -220,6 +221,13 @@ input, select {
     /* let content in box  */
     display: flex;
 }
+
+.dataBoxOne{
+    margin-left: 54px;
+    display: grid;
+    place-items: center;
+}
+
 .cardDataOne {
     color: #2A64F6;
     font-size: 5rem;
@@ -229,11 +237,55 @@ input, select {
     font-weight: 700;
 
 }
+
 .cardUnitOne {
     color: #5B5B5B;
     font-size: 1.2rem;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 600;
+    
+}
+
+.cardVerticalDivider{
+    width: 2px;
+    height: 200px;
+    background-color: #5b5b5b4a;
+    border-radius: 1px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8%;
+    margin-right: 2%;
+}
+
+.dataBoxTwo{
+    height: 220px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: grid;
+    place-items: left;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.dataBoxTwoInner{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.cardDataTwo {
+    color: #5B5B5B;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+
+}
+
+.cardUnitTwo {
+    color: #5B5B5B;
+    font-size: 0.8rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
     
 }
 
@@ -244,6 +296,7 @@ input, select {
 .deleteButton{
     background-color: #ffffff00;
     color: #5B5B5B;
+    width: 80px;
     font-size: 1rem;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 600;
@@ -261,18 +314,12 @@ input, select {
     border-color: #346cfa;
 }
 
-.dataBoxOne{
-    flex-grow: 1;
-    display: grid;
-    place-items: center;
-}
-
 .dateAndDeleteBox{
     padding-top: 10px;
-    margin-left: 30px;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
+    margin-left: auto;
+    margin-right: 60px;
+    display: grid;
+    justify-items: end;
 }
 
 
@@ -372,8 +419,59 @@ input, select {
     .dateAndDeleteBox h4{
         color: #5B5B5B;
         font-size: 0.8rem;
-        margin-top: 10px;
+        
         font-weight: 600;
+    }
+
+    .dataBoxOne{
+        margin-left: 40px;
+    }
+
+    .dateAndDeleteBox{
+        margin-right: 44px;
+    }
+
+    .cardVerticalDivider{
+        width: 2px;
+        height: 146px;
+        background-color: #5b5b5b4a;
+        border-radius: 1px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 8%;
+        margin-right: 2%;
+    }
+    
+    .dataBoxTwo{
+        height: 146px;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: grid;
+        place-items: left;
+        align-items: center;
+        margin-right: 5%;
+    }
+    
+    .dataBoxTwoInner{
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    
+    .cardDataTwo {
+        color: #5B5B5B;
+        font-size: 0.8rem;
+        margin-bottom: 3px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+    
+    }
+    
+    .cardUnitTwo {
+        color: #5B5B5B;
+        font-size: 0.6rem;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 400;
+        
     }
 }
 
@@ -383,7 +481,7 @@ input, select {
 /* this is the style for phone */
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     body{
         padding-top: 110px;
     }
@@ -409,8 +507,8 @@ input, select {
     .card {
         width: 94%;
         height: 140px;
+        padding: 10px;
     }
-
 
     #headerLayerTwo{
         width: 90%;
@@ -455,7 +553,7 @@ input, select {
 
     .cardDataOne {
         color: #2A64F6;
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         margin-top: 0px;
         margin-bottom: 0px;
         font-weight: 700;
@@ -473,18 +571,71 @@ input, select {
     }
     
     .deleteButton{
-        font-size: 0.6rem;
+        font-size: 10px;
         font-weight: 600;
+        border-width: 1.5px;
         border-color: #5B5B5B;
         border-radius: 30px;
-        padding: 2px 8px;
+        width: auto;
+        padding: 1px 6px;
         margin-top: 50px;
     }
 
     .dateAndDeleteBox h4{
         color: #5B5B5B;
-        font-size: 0.8rem;
-        margin-top: 10px;
+        font-size: 10px;
+
         font-weight: 600;
+    }
+
+    .dataBoxOne{
+        margin-left: 10px;
+    }
+
+    .dateAndDeleteBox{
+        margin-right: 14px;
+    }
+
+    .cardVerticalDivider{
+        width: 2px;
+        height: 104px;
+        background-color: #5b5b5b4a;
+        border-radius: 1px;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 6%;
+        margin-right: 4%;
+    }
+    
+    .dataBoxTwo{
+        height: 104px;
+        margin-top: auto;
+        margin-bottom: auto;
+        display: grid;
+        place-items: left;
+        align-items: center;
+        
+    }
+    
+    .dataBoxTwoInner{
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    
+    .cardDataTwo {
+        color: #5B5B5B;
+        font-size: 0.4rem;
+        margin-bottom: 1px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+    
+    }
+    
+    .cardUnitTwo {
+        color: #5B5B5B;
+        font-size: 6px;
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 400;
+        
     }
 }
