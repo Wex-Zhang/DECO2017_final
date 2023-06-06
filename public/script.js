@@ -14,10 +14,15 @@ function closeInputBox(inputId) {
 function addSwim() {
     let duration = parseInt(document.getElementById('duration').value);
     let distance = parseInt(document.getElementById('distance').value);
+    let calories = parseInt(document.getElementById('calories').value);
+    let date = document.getElementById('date').value;
+    
 
     let swimEntry = {
         duration: duration,
-        distance: distance
+        distance: distance,
+        calories: calories,
+        date: date,
     };
 
     swimData.push(swimEntry);
@@ -34,14 +39,25 @@ function displaySwimEntry(entry, index) {
     card.className = 'card';
     card.innerHTML = `
         <div class="dataBox">
-            <h4>Swim Duration</h4>
-            <h1>${entry.duration} Minutes</h1>
+            <h4>Duration</h4>
+            <h1>${entry.duration}</h1>
+            <h4>Minutes</h4>
         </div>
         <div class="dataBox">
-            <h4>Swim Distance</h4>
-            <h1>${entry.distance} Meter</h1>
+            <h4>Distance</h4>
+            <h1>${entry.distance}</h1>
+            <h4>Meters</h4>
         </div>
-        <button class="normalButton" onclick="deleteSwim(${index})">Delete</button>
+        <div class="dataBox">
+            <h4>Calories</h4>
+            <h1>${entry.calories}</h1>
+            <h4>Kcal</h4>
+        </div>       
+        <div>
+            <h4>${entry.date}</h4>
+            <button class="deleteButton" onclick="deleteSwim(${index})">Delete</button>
+        </div>       
+        
     `;
     cardContainer.appendChild(card);
 }
