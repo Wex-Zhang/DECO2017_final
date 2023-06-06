@@ -24,7 +24,7 @@
     <div id="WeightInputBox" class="recordInputBox">
         <div class="recordInputBoxContent">
             <span onclick="closeInputBox('WeightInputBox')" class="close">&times;</span>
-            <h2>Please input your weight</h2>
+            <h3>Please input your weight</h3>
             <label for="weight">Weight (Kg)</label>
             <input id="weight" type="number">
             <button class="normalButton" onclick="saveWeight()">Save</button>
@@ -35,6 +35,7 @@
 
     <div id="addSwimRecord" class="recordInputBox">
         <div class="recordInputBoxContent">
+            <span onclick="closeInputBox('addSwimRecord')" class="close">&times;</span>
             <label>Duration（Min）：</label>
             <input id="duration" type="number"><br>
             <label>Distance（Meter）：</label>
@@ -42,7 +43,7 @@
             <label for="intensity">Swim intensity</label>
             <select id="intensity">
                 <option value="6">Mild swimming</option>
-                <option value="10">Intense swimming</option>
+                <option value="10">Intensive swimming</option>
             </select>
             <label for="date">Date</label>
             <input id="date" type="date">

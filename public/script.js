@@ -4,6 +4,15 @@ let userInfo = JSON.parse(localStorage.getItem('userInfo')) || {
 };
 
 function showInputBox(inputId) {
+    // check if user has input the weight
+    if(inputId == 'addSwimRecord'){
+        if (userInfo.weight == 0) {
+            alert("Please enter your weight");
+            showInputBox('WeightInputBox');
+            return;
+        }
+    }
+
     let inputBox = document.getElementById(inputId);
     inputBox.style.display = 'block';
 }
@@ -15,6 +24,8 @@ function closeInputBox(inputId) {
 
 
 function addSwim() {
+
+
     let duration = parseInt(document.getElementById('duration').value);
     let distance = parseInt(document.getElementById('distance').value);
     let met = parseFloat(document.getElementById('intensity').value);
