@@ -1,4 +1,7 @@
 let swimData = JSON.parse(localStorage.getItem('swimData')) || [];
+let userInfo = JSON.parse(localStorage.getItem('userInfo')) || {
+    weight: 0,
+};
 
 function showInputBox(inputId) {
     let inputBox = document.getElementById(inputId);
@@ -14,9 +17,10 @@ function closeInputBox(inputId) {
 function addSwim() {
     let duration = parseInt(document.getElementById('duration').value);
     let distance = parseInt(document.getElementById('distance').value);
-    let calories = parseInt(document.getElementById('calories').value);
+    let met = parseFloat(document.getElementById('intensity').value);
     let date = document.getElementById('date').value;
     
+    let calories = calculateCalories(userInfo.weight, met, duration);
 
     let swimEntry = {
         duration: duration,
@@ -90,5 +94,19 @@ function displayTotalDistance() {
     card.innerHTML = `
         <h1>${totalDistance} Meters</h1>
         <h4>Total Distance</h4>
+        
     `;
+}
+
+function saveWeight() {
+    let weight = parseInt(document.getElementById('weight').value);
+    userInfo.weight = weight;
+    localStorage.setItem('userInfo', JSON.stringify(userInfo));
+    closeInputBox('WeightInputBox')
+}
+
+
+function calculateCalories(weight, met, duration) {
+    return parseInt((weight * met * duration * 3.5) / 200);
+    
 }

@@ -7,16 +7,28 @@
     <title>SwimSmart</title>
     <header id="myHeader">
         <center><h1>SwimSmart</h1></center>
+        <img src="weightIcon.png" id="weightImg" alt="Weight button" onclick="showInputBox('WeightInputBox')">
     </header>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+    
     <div id="sumAndAdd">
         <div id="totalDistanceDisplay"></div>
         <button id="addNewButton" onclick="showInputBox('addSwimRecord')">
             <h1>+</h1>
             <h4>Add Record</h4>
         </button>
+    </div>
+
+    <div id="WeightInputBox" class="recordInputBox">
+        <div class="recordInputBoxContent">
+            <span onclick="closeInputBox('WeightInputBox')" class="close">&times;</span>
+            <h2>Please input your weight</h2>
+            <label for="weight">Weight (Kg)</label>
+            <input id="weight" type="number">
+            <button class="normalButton" onclick="saveWeight()">Save</button>
+        </div>
     </div>
 
     <div id="swimCardContainer"></div>
@@ -27,8 +39,11 @@
             <input id="duration" type="number"><br>
             <label>Distance（Meter）：</label>
             <input id="distance" type="number"><br>
-            <label for="calories">Calories</label>
-            <input id="calories" type="number">
+            <label for="intensity">Swim intensity</label>
+            <select id="intensity">
+                <option value="6">Mild swimming</option>
+                <option value="10">Intense swimming</option>
+            </select>
             <label for="date">Date</label>
             <input id="date" type="date">
             <button class="normalButton" onclick="addSwim()">Record</button>
