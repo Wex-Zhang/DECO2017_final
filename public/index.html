@@ -9,14 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SignWriting&family=Open+Sans:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet">
     <header id="myHeader">
+        <!-- header layer one contains the logo and weight input button -->
         <div id="headerLayerOne">
             <center><h1>SwimSmart</h1></center>
+            <!-- when click this image call showInputBox function and pass 'WeightInputBox' parameter -->
             <img src="weightIcon.png" id="weightImg" alt="Weight button" onclick="showInputBox('WeightInputBox')">
         </div>
         <div id="headerHorizontalDivider"></div>
+        <!-- header layer 2 contains the total distance and add new swim record button -->
         <div id="headerLayerTwo">
             <div id="totalDistanceDisplay"></div>
             <div id="headerVerticalDivider"></div>
+            <!-- when click the button call showInputBox function and pass 'addSwimRecord' parameter -->
             <button id="addNewButton" onclick="showInputBox('addSwimRecord')">
                 <h1>+</h1>
                 <h4>Add Record</h4>
@@ -28,21 +32,24 @@
 <body>
     
     <div id="headerVerticalDivider"></div>
-
+    <!-- this create the weight input box html -->
     <div id="WeightInputBox" class="recordInputBox">
         <div class="recordInputBoxContent">
+            <!-- add the close input box button -->
             <span onclick="closeInputBox('WeightInputBox')" class="close">&times;</span>
             <h3>Please input your weight</h3>
             <label for="weight">Weight (Kg)</label>
             <input id="weight" type="number">
+            <!-- click the button and call saveWeight() function to save user's weight data  -->
             <button class="normalButton" onclick="saveWeight()">Save</button>
         </div>
     </div>
-
+    <!-- this div stores the swim record card -->
     <div id="swimCardContainer"></div>
-
+    <!-- this create the swim record input box -->
     <div id="addSwimRecord" class="recordInputBox">
         <div class="recordInputBoxContent">
+            <!-- add the close input box button -->
             <span onclick="closeInputBox('addSwimRecord')" class="close">&times;</span>
             <label>Duration（Min）：</label>
             <input id="duration" type="number"><br>
@@ -57,6 +64,7 @@
             </select>
             <label for="date">Date</label>
             <input id="date" type="date">
+            <!-- click this button to call addSwim() function to store user's swim data -->
             <button class="normalButton" onclick="addSwim()">Record</button>
         </div>
     </div>
